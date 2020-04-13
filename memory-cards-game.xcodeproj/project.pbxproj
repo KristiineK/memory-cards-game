@@ -3,27 +3,79 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1750CDAF8BBEEED07BD40A44 /* Pods_memory_cards_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776C5BB09F07121D62469F88 /* Pods_memory_cards_game.framework */; };
 		431749C824452679009E1F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749C724452679009E1F09 /* AppDelegate.swift */; };
-		431749CA24452679009E1F09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749C924452679009E1F09 /* SceneDelegate.swift */; };
-		431749CC24452679009E1F09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749CB24452679009E1F09 /* ViewController.swift */; };
-		431749CF24452679009E1F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749CD24452679009E1F09 /* Main.storyboard */; };
-		431749D12445267B009E1F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431749D02445267B009E1F09 /* Assets.xcassets */; };
 		431749D42445267B009E1F09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749D22445267B009E1F09 /* LaunchScreen.storyboard */; };
+		43174A0924452B7E009E1F09 /* ResultsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749DF24452B7E009E1F09 /* ResultsVM.swift */; };
+		43174A0A24452B7E009E1F09 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749E124452B7E009E1F09 /* ResultCell.swift */; };
+		43174A0B24452B7E009E1F09 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749E224452B7E009E1F09 /* ResultCell.xib */; };
+		43174A0C24452B7E009E1F09 /* ResultsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749E324452B7E009E1F09 /* ResultsVC.storyboard */; };
+		43174A0D24452B7E009E1F09 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749E424452B7E009E1F09 /* ResultsVC.swift */; };
+		43174A0E24452B7E009E1F09 /* MemoryCardsGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749E724452B7E009E1F09 /* MemoryCardsGameVM.swift */; };
+		43174A0F24452B7E009E1F09 /* GameInfoCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749EB24452B7E009E1F09 /* GameInfoCellVM.swift */; };
+		43174A1024452B7E009E1F09 /* GameInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749EC24452B7E009E1F09 /* GameInfoCell.xib */; };
+		43174A1124452B7E009E1F09 /* GameInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749ED24452B7E009E1F09 /* GameInfoCell.swift */; };
+		43174A1224452B7E009E1F09 /* CardCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F024452B7E009E1F09 /* CardCellVM.swift */; };
+		43174A1324452B7E009E1F09 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F124452B7E009E1F09 /* CardCell.swift */; };
+		43174A1424452B7E009E1F09 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749F224452B7E009E1F09 /* CardCell.xib */; };
+		43174A1524452B7E009E1F09 /* TimeCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F524452B7E009E1F09 /* TimeCellVM.swift */; };
+		43174A1624452B7E009E1F09 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749F624452B7E009E1F09 /* TimeCell.xib */; };
+		43174A1724452B7E009E1F09 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F724452B7E009E1F09 /* TimeCell.swift */; };
+		43174A1824452B7E009E1F09 /* MemoryCardsGameVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749F824452B7E009E1F09 /* MemoryCardsGameVC.storyboard */; };
+		43174A1924452B7E009E1F09 /* MemoryCardsGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749FA24452B7E009E1F09 /* MemoryCardsGameVC.swift */; };
+		43174A1A24452B7E009E1F09 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749FD24452B7E009E1F09 /* MenuVM.swift */; };
+		43174A1B24452B7E009E1F09 /* MenuVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749FE24452B7E009E1F09 /* MenuVC.storyboard */; };
+		43174A1C24452B7E009E1F09 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749FF24452B7E009E1F09 /* MenuVC.swift */; };
+		43174A1D24452B7E009E1F09 /* FlowStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0124452B7E009E1F09 /* FlowStep.swift */; };
+		43174A1E24452B7E009E1F09 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0224452B7E009E1F09 /* AppFlow.swift */; };
+		43174A1F24452B7E009E1F09 /* NavigationControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0424452B7E009E1F09 /* NavigationControllerUtils.swift */; };
+		43174A2024452B7E009E1F09 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0524452B7E009E1F09 /* TimeUtils.swift */; };
+		43174A2124452B7E009E1F09 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0624452B7E009E1F09 /* ArrayUtils.swift */; };
+		43174A2224452B7E009E1F09 /* GameRoundDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0824452B7E009E1F09 /* GameRoundDO.swift */; };
+		43174A2624452C24009E1F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43174A2424452C24009E1F09 /* Assets.xcassets */; };
+		43174A2724452C24009E1F09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43174A2524452C24009E1F09 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EB02C741EA05C97651D531D /* Pods-memory-cards-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-cards-game.release.xcconfig"; path = "Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game.release.xcconfig"; sourceTree = "<group>"; };
 		431749C424452679009E1F09 /* Memory cards game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory cards game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431749C724452679009E1F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		431749C924452679009E1F09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		431749CB24452679009E1F09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		431749CE24452679009E1F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		431749D02445267B009E1F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431749D32445267B009E1F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431749D52445267B009E1F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		431749DF24452B7E009E1F09 /* ResultsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVM.swift; sourceTree = "<group>"; };
+		431749E124452B7E009E1F09 /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		431749E224452B7E009E1F09 /* ResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
+		431749E324452B7E009E1F09 /* ResultsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultsVC.storyboard; sourceTree = "<group>"; };
+		431749E424452B7E009E1F09 /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		431749E724452B7E009E1F09 /* MemoryCardsGameVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCardsGameVM.swift; sourceTree = "<group>"; };
+		431749EB24452B7E009E1F09 /* GameInfoCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoCellVM.swift; sourceTree = "<group>"; };
+		431749EC24452B7E009E1F09 /* GameInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameInfoCell.xib; sourceTree = "<group>"; };
+		431749ED24452B7E009E1F09 /* GameInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoCell.swift; sourceTree = "<group>"; };
+		431749F024452B7E009E1F09 /* CardCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellVM.swift; sourceTree = "<group>"; };
+		431749F124452B7E009E1F09 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		431749F224452B7E009E1F09 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		431749F524452B7E009E1F09 /* TimeCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCellVM.swift; sourceTree = "<group>"; };
+		431749F624452B7E009E1F09 /* TimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
+		431749F724452B7E009E1F09 /* TimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		431749F924452B7E009E1F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MemoryCardsGameVC.storyboard; sourceTree = "<group>"; };
+		431749FA24452B7E009E1F09 /* MemoryCardsGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCardsGameVC.swift; sourceTree = "<group>"; };
+		431749FD24452B7E009E1F09 /* MenuVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
+		431749FE24452B7E009E1F09 /* MenuVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuVC.storyboard; sourceTree = "<group>"; };
+		431749FF24452B7E009E1F09 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		43174A0124452B7E009E1F09 /* FlowStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowStep.swift; sourceTree = "<group>"; };
+		43174A0224452B7E009E1F09 /* AppFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		43174A0424452B7E009E1F09 /* NavigationControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerUtils.swift; sourceTree = "<group>"; };
+		43174A0524452B7E009E1F09 /* TimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		43174A0624452B7E009E1F09 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
+		43174A0824452B7E009E1F09 /* GameRoundDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRoundDO.swift; sourceTree = "<group>"; };
+		43174A2424452C24009E1F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43174A2524452C24009E1F09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		449ACB88CE2A2C1D20AFE340 /* Pods-memory-cards-game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-cards-game.debug.xcconfig"; path = "Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game.debug.xcconfig"; sourceTree = "<group>"; };
+		776C5BB09F07121D62469F88 /* Pods_memory_cards_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memory_cards_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1750CDAF8BBEEED07BD40A44 /* Pods_memory_cards_game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +95,8 @@
 			children = (
 				431749C624452679009E1F09 /* memory-cards-game */,
 				431749C524452679009E1F09 /* Products */,
+				A008B4561DBA3F4D46E4F127 /* Pods */,
+				723C77B68F80342879BE380E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +111,216 @@
 		431749C624452679009E1F09 /* memory-cards-game */ = {
 			isa = PBXGroup;
 			children = (
+				431749DB24452B7E009E1F09 /* Classes */,
+				43174A2324452C23009E1F09 /* Resources */,
 				431749C724452679009E1F09 /* AppDelegate.swift */,
-				431749C924452679009E1F09 /* SceneDelegate.swift */,
-				431749CB24452679009E1F09 /* ViewController.swift */,
-				431749CD24452679009E1F09 /* Main.storyboard */,
-				431749D02445267B009E1F09 /* Assets.xcassets */,
 				431749D22445267B009E1F09 /* LaunchScreen.storyboard */,
 				431749D52445267B009E1F09 /* Info.plist */,
 			);
 			path = "memory-cards-game";
+			sourceTree = "<group>";
+		};
+		431749DB24452B7E009E1F09 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				431749DC24452B7E009E1F09 /* UI */,
+				43174A0324452B7E009E1F09 /* Utils */,
+				43174A0724452B7E009E1F09 /* Data */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		431749DC24452B7E009E1F09 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				431749FB24452B7E009E1F09 /* Menu */,
+				431749E524452B7E009E1F09 /* MemoryCardsGame */,
+				431749DD24452B7E009E1F09 /* Results */,
+				43174A0024452B7E009E1F09 /* Flows */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		431749DD24452B7E009E1F09 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				431749DE24452B7E009E1F09 /* ViewModel */,
+				431749E024452B7E009E1F09 /* Cells */,
+				431749E324452B7E009E1F09 /* ResultsVC.storyboard */,
+				431749E424452B7E009E1F09 /* ResultsVC.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		431749DE24452B7E009E1F09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				431749DF24452B7E009E1F09 /* ResultsVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		431749E024452B7E009E1F09 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				431749E124452B7E009E1F09 /* ResultCell.swift */,
+				431749E224452B7E009E1F09 /* ResultCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		431749E524452B7E009E1F09 /* MemoryCardsGame */ = {
+			isa = PBXGroup;
+			children = (
+				431749E624452B7E009E1F09 /* ViewModel */,
+				431749E824452B7E009E1F09 /* Cells */,
+				431749F824452B7E009E1F09 /* MemoryCardsGameVC.storyboard */,
+				431749FA24452B7E009E1F09 /* MemoryCardsGameVC.swift */,
+			);
+			path = MemoryCardsGame;
+			sourceTree = "<group>";
+		};
+		431749E624452B7E009E1F09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				431749E724452B7E009E1F09 /* MemoryCardsGameVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		431749E824452B7E009E1F09 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				431749E924452B7E009E1F09 /* GameInfoCell */,
+				431749EE24452B7E009E1F09 /* CardCell */,
+				431749F324452B7E009E1F09 /* TimeCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		431749E924452B7E009E1F09 /* GameInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				431749EA24452B7E009E1F09 /* ViewModel */,
+				431749EC24452B7E009E1F09 /* GameInfoCell.xib */,
+				431749ED24452B7E009E1F09 /* GameInfoCell.swift */,
+			);
+			path = GameInfoCell;
+			sourceTree = "<group>";
+		};
+		431749EA24452B7E009E1F09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				431749EB24452B7E009E1F09 /* GameInfoCellVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		431749EE24452B7E009E1F09 /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				431749EF24452B7E009E1F09 /* ViewModel */,
+				431749F124452B7E009E1F09 /* CardCell.swift */,
+				431749F224452B7E009E1F09 /* CardCell.xib */,
+			);
+			path = CardCell;
+			sourceTree = "<group>";
+		};
+		431749EF24452B7E009E1F09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				431749F024452B7E009E1F09 /* CardCellVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		431749F324452B7E009E1F09 /* TimeCell */ = {
+			isa = PBXGroup;
+			children = (
+				431749F424452B7E009E1F09 /* ViewModel */,
+				431749F624452B7E009E1F09 /* TimeCell.xib */,
+				431749F724452B7E009E1F09 /* TimeCell.swift */,
+			);
+			path = TimeCell;
+			sourceTree = "<group>";
+		};
+		431749F424452B7E009E1F09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				431749F524452B7E009E1F09 /* TimeCellVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		431749FB24452B7E009E1F09 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				431749FC24452B7E009E1F09 /* ViewModel */,
+				431749FE24452B7E009E1F09 /* MenuVC.storyboard */,
+				431749FF24452B7E009E1F09 /* MenuVC.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		431749FC24452B7E009E1F09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				431749FD24452B7E009E1F09 /* MenuVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		43174A0024452B7E009E1F09 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				43174A0124452B7E009E1F09 /* FlowStep.swift */,
+				43174A0224452B7E009E1F09 /* AppFlow.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		43174A0324452B7E009E1F09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				43174A0424452B7E009E1F09 /* NavigationControllerUtils.swift */,
+				43174A0524452B7E009E1F09 /* TimeUtils.swift */,
+				43174A0624452B7E009E1F09 /* ArrayUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		43174A0724452B7E009E1F09 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				43174A0824452B7E009E1F09 /* GameRoundDO.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		43174A2324452C23009E1F09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43174A2424452C24009E1F09 /* Assets.xcassets */,
+				43174A2524452C24009E1F09 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		723C77B68F80342879BE380E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				776C5BB09F07121D62469F88 /* Pods_memory_cards_game.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A008B4561DBA3F4D46E4F127 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				449ACB88CE2A2C1D20AFE340 /* Pods-memory-cards-game.debug.xcconfig */,
+				0EB02C741EA05C97651D531D /* Pods-memory-cards-game.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 431749D82445267B009E1F09 /* Build configuration list for PBXNativeTarget "memory-cards-game" */;
 			buildPhases = (
+				1F027B062F2655472AADB36E /* [CP] Check Pods Manifest.lock */,
 				431749C024452679009E1F09 /* Sources */,
 				431749C124452679009E1F09 /* Frameworks */,
 				431749C224452679009E1F09 /* Resources */,
+				044FCBDEE80C8B326765B196 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,41 +384,107 @@
 			buildActionMask = 2147483647;
 			files = (
 				431749D42445267B009E1F09 /* LaunchScreen.storyboard in Resources */,
-				431749D12445267B009E1F09 /* Assets.xcassets in Resources */,
-				431749CF24452679009E1F09 /* Main.storyboard in Resources */,
+				43174A2724452C24009E1F09 /* Images.xcassets in Resources */,
+				43174A0B24452B7E009E1F09 /* ResultCell.xib in Resources */,
+				43174A1424452B7E009E1F09 /* CardCell.xib in Resources */,
+				43174A1624452B7E009E1F09 /* TimeCell.xib in Resources */,
+				43174A0C24452B7E009E1F09 /* ResultsVC.storyboard in Resources */,
+				43174A1824452B7E009E1F09 /* MemoryCardsGameVC.storyboard in Resources */,
+				43174A1B24452B7E009E1F09 /* MenuVC.storyboard in Resources */,
+				43174A2624452C24009E1F09 /* Assets.xcassets in Resources */,
+				43174A1024452B7E009E1F09 /* GameInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		044FCBDEE80C8B326765B196 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F027B062F2655472AADB36E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-memory-cards-game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		431749C024452679009E1F09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431749CC24452679009E1F09 /* ViewController.swift in Sources */,
+				43174A1224452B7E009E1F09 /* CardCellVM.swift in Sources */,
+				43174A1E24452B7E009E1F09 /* AppFlow.swift in Sources */,
+				43174A0F24452B7E009E1F09 /* GameInfoCellVM.swift in Sources */,
+				43174A1924452B7E009E1F09 /* MemoryCardsGameVC.swift in Sources */,
+				43174A1724452B7E009E1F09 /* TimeCell.swift in Sources */,
+				43174A2024452B7E009E1F09 /* TimeUtils.swift in Sources */,
+				43174A1C24452B7E009E1F09 /* MenuVC.swift in Sources */,
+				43174A0D24452B7E009E1F09 /* ResultsVC.swift in Sources */,
+				43174A0E24452B7E009E1F09 /* MemoryCardsGameVM.swift in Sources */,
 				431749C824452679009E1F09 /* AppDelegate.swift in Sources */,
-				431749CA24452679009E1F09 /* SceneDelegate.swift in Sources */,
+				43174A2224452B7E009E1F09 /* GameRoundDO.swift in Sources */,
+				43174A1324452B7E009E1F09 /* CardCell.swift in Sources */,
+				43174A0A24452B7E009E1F09 /* ResultCell.swift in Sources */,
+				43174A1D24452B7E009E1F09 /* FlowStep.swift in Sources */,
+				43174A1F24452B7E009E1F09 /* NavigationControllerUtils.swift in Sources */,
+				43174A2124452B7E009E1F09 /* ArrayUtils.swift in Sources */,
+				43174A1524452B7E009E1F09 /* TimeCellVM.swift in Sources */,
+				43174A0924452B7E009E1F09 /* ResultsVM.swift in Sources */,
+				43174A1124452B7E009E1F09 /* GameInfoCell.swift in Sources */,
+				43174A1A24452B7E009E1F09 /* MenuVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		431749CD24452679009E1F09 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				431749CE24452679009E1F09 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		431749D22445267B009E1F09 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				431749D32445267B009E1F09 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		431749F824452B7E009E1F09 /* MemoryCardsGameVC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				431749F924452B7E009E1F09 /* Base */,
+			);
+			name = MemoryCardsGameVC.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -282,10 +606,12 @@
 		};
 		431749D92445267B009E1F09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449ACB88CE2A2C1D20AFE340 /* Pods-memory-cards-game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "memory-cards-game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +625,12 @@
 		};
 		431749DA2445267B009E1F09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB02C741EA05C97651D531D /* Pods-memory-cards-game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "memory-cards-game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,61 @@
+PODS:
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+  - RxAnimated (0.7.0):
+    - RxAnimated/Core (= 0.7.0)
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxAnimated/Core (0.7.0):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxFlow (2.7.0):
+    - RxCocoa (>= 5.0.0)
+    - RxSwift (>= 5.0.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+
+DEPENDENCIES:
+  - Reusable
+  - RxAnimated
+  - RxCocoa (~> 5)
+  - RxFlow
+  - RxSwift (~> 5)
+  - RxSwiftExt
+
+SPEC REPOS:
+  trunk:
+    - Reusable
+    - RxAnimated
+    - RxCocoa
+    - RxFlow
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+
+SPEC CHECKSUMS:
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  RxAnimated: 8540892468e906e7404595bc51ed4b36b3737ab5
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxFlow: 605ef6364d7e937bea8f9507a1e99a431cdc2493
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+
+PODFILE CHECKSUM: a6c4cd670f283e3262e47a8f2b530cfa1a1c1caa
+
+COCOAPODS: 1.8.4
