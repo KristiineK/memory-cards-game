@@ -111,7 +111,7 @@ final class MemoryCardsGameVM: PMemoryCardsGameVM {
         sharedTimeLeft
             .map { TimeUtils.timeLeftString(seconds: $0) }
             .unwrap()
-            .bind(to: timeVM.leftTimeStringTriger)
+            .bind(to: timeVM.leftTimeStringTrigger)
             .disposed(by: bag)
 
         let sharedTimeIsUp = sharedTimeLeft.filter { $0 == 0 }.share(replay: 1)
@@ -138,17 +138,19 @@ final class MemoryCardsGameVM: PMemoryCardsGameVM {
         let sharedAllCardsOpened = foundIdenticalCards
                                         .withLatestFrom(cardsVM) { ($0, $1) }
                                         .filter { $0.0.count == $0.1.count }
+                                        .map { $0.0 }
                                         .delay(.seconds(kDelay), scheduler: MainScheduler.instance)
                                         .share(replay: 1)
 
         sharedAllCardsOpened
-            .withLatestFrom(Observable.combineLatest(kTimeInSeconds, timeLeft.unwrap(), rounds, movesCount)) { ($0, $1) }
-            .filter { $1.1 != 0 }
+            .withLatestFrom(Observable.combineLatest(kTimeInSeconds, timeLeft.unwrap(), rounds, movesCount))
+            { (foundIdenticalCards: $0, time: $1.0, timeLeft: $1.1, rounds: $1.2, movesCount: $1.3) }
+            .filter { $0.timeLeft != 0 }
             .map {
-                let otherRoundsTime = $1.2.map { $0.spentTimeInSeconds }.reduce(0, +)
-                let spentTimeInSeconds = $1.0 - $1.1 - otherRoundsTime
-                let gameRound = GameRoundDO(spentTimeInSeconds: spentTimeInSeconds, movesCount: $1.3, isFinished: true, pairsFoundCount: $0.0.count / 2)
-                var rounds = $1.2
+                let otherRoundsTime = $0.rounds.map { $0.spentTimeInSeconds }.reduce(0, +)
+                let spentTimeInSeconds = $0.time - $0.timeLeft - otherRoundsTime
+                let gameRound = GameRoundDO(spentTimeInSeconds: spentTimeInSeconds, movesCount: $0.movesCount, isFinished: true, pairsFoundCount: $0.foundIdenticalCards.count / 2)
+                var rounds = $0.rounds
                 rounds.append(gameRound)
                 return rounds
             }

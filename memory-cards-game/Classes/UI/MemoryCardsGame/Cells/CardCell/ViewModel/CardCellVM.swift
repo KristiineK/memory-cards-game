@@ -34,17 +34,17 @@ enum CardImage: String, CaseIterable {
 }
 
 final class CardCellVM: Equatable {
-    let cardImage: BehaviorRelay<CardImage>
+    let cardImage: CardImage
     let flipCard = BehaviorRelay<Bool>(value: false)
     let pairFound = BehaviorRelay<Bool>(value: false)
 
     let bag = DisposeBag()
 
     init(cardImage: CardImage) {
-        self.cardImage = BehaviorRelay<CardImage>(value: cardImage)
+        self.cardImage = cardImage
     }
 
     static func == (lhs: CardCellVM, rhs: CardCellVM) -> Bool {
-        return lhs.cardImage.value == rhs.cardImage.value
+        return lhs.cardImage == rhs.cardImage
     }
 }

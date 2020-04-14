@@ -28,19 +28,19 @@ final class CardCell: UICollectionViewCell {
 
         let sharedFlipCard = viewModel.flipCard.share(replay: 1)
 
+        let image = viewModel.cardImage.image
+
         sharedFlipCard
             .take(1)
             .filter { $0 }
-            .withLatestFrom(viewModel.cardImage)
-            .map { $0.image }
+            .map { _ in image }
             .bind(to: cardImageView.rx.image)
             .disposed(by: bag)
 
         sharedFlipCard
             .skip(1)
             .filter { $0 }
-            .withLatestFrom(viewModel.cardImage)
-            .map { $0.image }
+            .map { _ in image }
             .bind(animated: cardImageView.rx.animated.flip(.right, duration: 0.5).image)
             .disposed(by: bag)
 

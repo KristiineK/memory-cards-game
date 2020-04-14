@@ -16,7 +16,7 @@ final class TimeCell: UICollectionViewCell {
     var bag = DisposeBag()
 
     func configure(viewModel: TimeCellVM) {
-        viewModel.leftTimeStringTriger
+        viewModel.leftTimeStringTrigger
             .bind(to: timeLabel.rx.text)
             .disposed(by: bag)
     }

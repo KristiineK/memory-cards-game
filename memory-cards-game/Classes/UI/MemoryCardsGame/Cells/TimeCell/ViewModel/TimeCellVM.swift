@@ -11,5 +11,5 @@ import RxSwift
 import RxCocoa
 
 final class TimeCellVM {
-    let leftTimeStringTriger = BehaviorRelay<String>(value: "")
+    let leftTimeStringTrigger = PublishRelay<String>()
 }
