@@ -12,43 +12,44 @@ import RxCocoa
 import RxSwiftExt
 import RxFlow
 
-enum SectionType: String, CaseIterable {
-    case time = "TimeCell"
-    case cards = "CardCell"
-    case info = "GameInfoCell"
-}
-
 protocol PMemoryCardsGameVM: Stepper {
     var kSpacingForCells: CGFloat { get }
+    var kCardCell: String { get }
     var cardsVM: BehaviorRelay<[CardCellVM]> { get }
-    var timeVM: TimeCellVM { get }
-    var infoVM: GameInfoCellVM { get }
     var difficultyType: BehaviorRelay<DifficultyType> { get }
     var flipCardTrigger: PublishRelay<IndexPath> { get }
     var beginTimerTrigger: PublishRelay<Void> { get }
+    var leftTimeStringTrigger: PublishRelay<String> { get }
+    var littleTimeLeftTrigger: PublishRelay<Void> { get }
+    var round: BehaviorRelay<String> { get }
+    var score: BehaviorRelay<String> { get }
 }
 
 final class MemoryCardsGameVM: PMemoryCardsGameVM {
     let steps = PublishRelay<Step>()
 
-    let kSpacingForCells: CGFloat = 10
+    let kSpacingForCells: CGFloat = 8
+    let kCardCell = "CardCell"
     private let kDelay = 1
     private let kTimeInSeconds = BehaviorRelay<Int>(value: 120)
+    private let kLittleTimeLeftInSeconds = BehaviorRelay<Int>(value: 30)
 
     let cardsVM = BehaviorRelay<[CardCellVM]>(value: [])
-    let timeVM = TimeCellVM()
-    let infoVM = GameInfoCellVM()
     let flipCardTrigger = PublishRelay<IndexPath>()
     let beginTimerTrigger = PublishRelay<Void>()
+    let leftTimeStringTrigger = PublishRelay<String>()
+    let littleTimeLeftTrigger = PublishRelay<Void>()
+    let round = BehaviorRelay<String>(value: "1")
+    let score = BehaviorRelay<String>(value: "0")
     let difficultyType: BehaviorRelay<DifficultyType>
-    
+
     private let foundIdenticalCards = BehaviorRelay<[CardCellVM]>(value: [])
     private let firstFlippedCard = BehaviorRelay<IndexPath?>(value: nil)
     private let secondFlippedCard = BehaviorRelay<IndexPath?>(value: nil)
     private let timeLeft = BehaviorRelay<Int?>(value: nil)
     private let movesCount = BehaviorRelay<Int>(value: 0)
     private let rounds = BehaviorRelay<[GameRoundDO]>(value: [])
-    
+
     private let bag = DisposeBag()
 
     init(difficultyType: DifficultyType) {
@@ -96,6 +97,7 @@ final class MemoryCardsGameVM: PMemoryCardsGameVM {
             .disposed(by: bag)
 
         let kTimeInSeconds = self.kTimeInSeconds
+        let kLittleTimeLeftInSeconds = self.kLittleTimeLeftInSeconds
         beginTimerTrigger
             .flatMapLatest {
                 Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
@@ -111,13 +113,20 @@ final class MemoryCardsGameVM: PMemoryCardsGameVM {
         sharedTimeLeft
             .map { TimeUtils.timeLeftString(seconds: $0) }
             .unwrap()
-            .bind(to: timeVM.leftTimeStringTrigger)
+            .bind(to: leftTimeStringTrigger)
+            .disposed(by: bag)
+
+        sharedTimeLeft
+            .filter { $0 == kLittleTimeLeftInSeconds.value }
+            .take(1)
+            .map { _ in }
+            .bind(to: littleTimeLeftTrigger)
             .disposed(by: bag)
 
         let sharedTimeIsUp = sharedTimeLeft.filter { $0 == 0 }.share(replay: 1)
 
         sharedTimeIsUp
-            .withLatestFrom(Observable.combineLatest(kTimeInSeconds, rounds, movesCount,foundIdenticalCards, cardsVM))
+            .withLatestFrom(Observable.combineLatest(kTimeInSeconds, rounds, movesCount, foundIdenticalCards, cardsVM))
             .map {
                 let otherRoundsTime = $0.1.map { $0.spentTimeInSeconds }.reduce(0, +)
                 let spentTimeInSeconds = $0.0 - otherRoundsTime
@@ -175,12 +184,15 @@ final class MemoryCardsGameVM: PMemoryCardsGameVM {
             .bind(to: foundIdenticalCards)
             .disposed(by: bag)
 
-        rounds
-            .map { $0.count + 1 }
-            .bind(to: infoVM.round)
+        Observable.combineLatest(foundIdenticalCards, rounds)
+            .map { "\($0.0.count / 2 + $0.1.map({$0.pairsFoundCount}).reduce(0,+))" }
+            .bind(to: score)
             .disposed(by: bag)
 
-        movesCount.bind(to: infoVM.moves).disposed(by: bag)
+        rounds
+            .map { "\($0.count + 1)" }
+            .bind(to: round)
+            .disposed(by: bag)
     }
 
     private func compareCards(firstFlippedCard: CardCellVM, secondFlippedCard: CardCellVM) {

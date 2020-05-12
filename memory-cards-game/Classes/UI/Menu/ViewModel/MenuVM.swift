@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kristīne Kazakēviča. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
 import RxFlow
@@ -40,6 +40,28 @@ enum DifficultyType: CaseIterable {
 
     var cardsCount: Int {
         return cardsGrid.columnCount * cardsGrid.rowCount
+    }
+
+    var buttonBackgroundColor: UIColor {
+        switch self {
+        case .easy:
+            return UIColor.greenEFF6F5
+        case .medium:
+            return UIColor.blueEDF4FD
+        case .hard:
+            return UIColor.redFEEBEC
+        }
+    }
+
+    var buttonTextColor: UIColor {
+        switch self {
+        case .easy:
+            return UIColor.green60A699
+        case .medium:
+            return UIColor.blue4A90E2
+        case .hard:
+            return UIColor.redF8343D
+        }
     }
 }
 

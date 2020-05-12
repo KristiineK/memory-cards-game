@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1750CDAF8BBEEED07BD40A44 /* Pods_memory_cards_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776C5BB09F07121D62469F88 /* Pods_memory_cards_game.framework */; };
+		431241602468A5A7002BF631 /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4312415F2468A5A7002BF631 /* GradientUtils.swift */; };
+		431241622469E89C002BF631 /* ShadowUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431241612469E89C002BF631 /* ShadowUtils.swift */; };
+		43124169246A84B4002BF631 /* AnimationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43124168246A84B4002BF631 /* AnimationUtils.swift */; };
 		431749C824452679009E1F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749C724452679009E1F09 /* AppDelegate.swift */; };
 		431749D42445267B009E1F09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749D22445267B009E1F09 /* LaunchScreen.storyboard */; };
 		43174A0924452B7E009E1F09 /* ResultsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749DF24452B7E009E1F09 /* ResultsVM.swift */; };
@@ -16,15 +19,9 @@
 		43174A0C24452B7E009E1F09 /* ResultsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749E324452B7E009E1F09 /* ResultsVC.storyboard */; };
 		43174A0D24452B7E009E1F09 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749E424452B7E009E1F09 /* ResultsVC.swift */; };
 		43174A0E24452B7E009E1F09 /* MemoryCardsGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749E724452B7E009E1F09 /* MemoryCardsGameVM.swift */; };
-		43174A0F24452B7E009E1F09 /* GameInfoCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749EB24452B7E009E1F09 /* GameInfoCellVM.swift */; };
-		43174A1024452B7E009E1F09 /* GameInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749EC24452B7E009E1F09 /* GameInfoCell.xib */; };
-		43174A1124452B7E009E1F09 /* GameInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749ED24452B7E009E1F09 /* GameInfoCell.swift */; };
 		43174A1224452B7E009E1F09 /* CardCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F024452B7E009E1F09 /* CardCellVM.swift */; };
 		43174A1324452B7E009E1F09 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F124452B7E009E1F09 /* CardCell.swift */; };
 		43174A1424452B7E009E1F09 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749F224452B7E009E1F09 /* CardCell.xib */; };
-		43174A1524452B7E009E1F09 /* TimeCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F524452B7E009E1F09 /* TimeCellVM.swift */; };
-		43174A1624452B7E009E1F09 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431749F624452B7E009E1F09 /* TimeCell.xib */; };
-		43174A1724452B7E009E1F09 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749F724452B7E009E1F09 /* TimeCell.swift */; };
 		43174A1824452B7E009E1F09 /* MemoryCardsGameVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431749F824452B7E009E1F09 /* MemoryCardsGameVC.storyboard */; };
 		43174A1924452B7E009E1F09 /* MemoryCardsGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749FA24452B7E009E1F09 /* MemoryCardsGameVC.swift */; };
 		43174A1A24452B7E009E1F09 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431749FD24452B7E009E1F09 /* MenuVM.swift */; };
@@ -38,10 +35,14 @@
 		43174A2224452B7E009E1F09 /* GameRoundDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174A0824452B7E009E1F09 /* GameRoundDO.swift */; };
 		43174A2624452C24009E1F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43174A2424452C24009E1F09 /* Assets.xcassets */; };
 		43174A2724452C24009E1F09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43174A2524452C24009E1F09 /* Images.xcassets */; };
+		4395CFAF24689DA900D016B0 /* ColorStylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395CFAE24689DA900D016B0 /* ColorStylesheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EB02C741EA05C97651D531D /* Pods-memory-cards-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-cards-game.release.xcconfig"; path = "Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game.release.xcconfig"; sourceTree = "<group>"; };
+		4312415F2468A5A7002BF631 /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
+		431241612469E89C002BF631 /* ShadowUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowUtils.swift; sourceTree = "<group>"; };
+		43124168246A84B4002BF631 /* AnimationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtils.swift; sourceTree = "<group>"; };
 		431749C424452679009E1F09 /* Memory cards game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory cards game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431749C724452679009E1F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431749D32445267B009E1F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,15 +53,9 @@
 		431749E324452B7E009E1F09 /* ResultsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultsVC.storyboard; sourceTree = "<group>"; };
 		431749E424452B7E009E1F09 /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
 		431749E724452B7E009E1F09 /* MemoryCardsGameVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCardsGameVM.swift; sourceTree = "<group>"; };
-		431749EB24452B7E009E1F09 /* GameInfoCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoCellVM.swift; sourceTree = "<group>"; };
-		431749EC24452B7E009E1F09 /* GameInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameInfoCell.xib; sourceTree = "<group>"; };
-		431749ED24452B7E009E1F09 /* GameInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfoCell.swift; sourceTree = "<group>"; };
 		431749F024452B7E009E1F09 /* CardCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellVM.swift; sourceTree = "<group>"; };
 		431749F124452B7E009E1F09 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		431749F224452B7E009E1F09 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
-		431749F524452B7E009E1F09 /* TimeCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCellVM.swift; sourceTree = "<group>"; };
-		431749F624452B7E009E1F09 /* TimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
-		431749F724452B7E009E1F09 /* TimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 		431749F924452B7E009E1F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MemoryCardsGameVC.storyboard; sourceTree = "<group>"; };
 		431749FA24452B7E009E1F09 /* MemoryCardsGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCardsGameVC.swift; sourceTree = "<group>"; };
 		431749FD24452B7E009E1F09 /* MenuVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
@@ -74,6 +69,7 @@
 		43174A0824452B7E009E1F09 /* GameRoundDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRoundDO.swift; sourceTree = "<group>"; };
 		43174A2424452C24009E1F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43174A2524452C24009E1F09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4395CFAE24689DA900D016B0 /* ColorStylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStylesheet.swift; sourceTree = "<group>"; };
 		449ACB88CE2A2C1D20AFE340 /* Pods-memory-cards-game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memory-cards-game.debug.xcconfig"; path = "Target Support Files/Pods-memory-cards-game/Pods-memory-cards-game.debug.xcconfig"; sourceTree = "<group>"; };
 		776C5BB09F07121D62469F88 /* Pods_memory_cards_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memory_cards_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +129,7 @@
 		431749DC24452B7E009E1F09 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4395CFAD24689D9600D016B0 /* Stylesheet */,
 				431749FB24452B7E009E1F09 /* Menu */,
 				431749E524452B7E009E1F09 /* MemoryCardsGame */,
 				431749DD24452B7E009E1F09 /* Results */,
@@ -191,29 +188,9 @@
 		431749E824452B7E009E1F09 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				431749E924452B7E009E1F09 /* GameInfoCell */,
 				431749EE24452B7E009E1F09 /* CardCell */,
-				431749F324452B7E009E1F09 /* TimeCell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		431749E924452B7E009E1F09 /* GameInfoCell */ = {
-			isa = PBXGroup;
-			children = (
-				431749EA24452B7E009E1F09 /* ViewModel */,
-				431749EC24452B7E009E1F09 /* GameInfoCell.xib */,
-				431749ED24452B7E009E1F09 /* GameInfoCell.swift */,
-			);
-			path = GameInfoCell;
-			sourceTree = "<group>";
-		};
-		431749EA24452B7E009E1F09 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				431749EB24452B7E009E1F09 /* GameInfoCellVM.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		431749EE24452B7E009E1F09 /* CardCell */ = {
@@ -230,24 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				431749F024452B7E009E1F09 /* CardCellVM.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		431749F324452B7E009E1F09 /* TimeCell */ = {
-			isa = PBXGroup;
-			children = (
-				431749F424452B7E009E1F09 /* ViewModel */,
-				431749F624452B7E009E1F09 /* TimeCell.xib */,
-				431749F724452B7E009E1F09 /* TimeCell.swift */,
-			);
-			path = TimeCell;
-			sourceTree = "<group>";
-		};
-		431749F424452B7E009E1F09 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				431749F524452B7E009E1F09 /* TimeCellVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +244,9 @@
 				43174A0424452B7E009E1F09 /* NavigationControllerUtils.swift */,
 				43174A0524452B7E009E1F09 /* TimeUtils.swift */,
 				43174A0624452B7E009E1F09 /* ArrayUtils.swift */,
+				4312415F2468A5A7002BF631 /* GradientUtils.swift */,
+				431241612469E89C002BF631 /* ShadowUtils.swift */,
+				43124168246A84B4002BF631 /* AnimationUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,6 +266,14 @@
 				43174A2524452C24009E1F09 /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4395CFAD24689D9600D016B0 /* Stylesheet */ = {
+			isa = PBXGroup;
+			children = (
+				4395CFAE24689DA900D016B0 /* ColorStylesheet.swift */,
+			);
+			path = Stylesheet;
 			sourceTree = "<group>";
 		};
 		723C77B68F80342879BE380E /* Frameworks */ = {
@@ -387,12 +357,10 @@
 				43174A2724452C24009E1F09 /* Images.xcassets in Resources */,
 				43174A0B24452B7E009E1F09 /* ResultCell.xib in Resources */,
 				43174A1424452B7E009E1F09 /* CardCell.xib in Resources */,
-				43174A1624452B7E009E1F09 /* TimeCell.xib in Resources */,
 				43174A0C24452B7E009E1F09 /* ResultsVC.storyboard in Resources */,
 				43174A1824452B7E009E1F09 /* MemoryCardsGameVC.storyboard in Resources */,
 				43174A1B24452B7E009E1F09 /* MenuVC.storyboard in Resources */,
 				43174A2624452C24009E1F09 /* Assets.xcassets in Resources */,
-				43174A1024452B7E009E1F09 /* GameInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,12 +413,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43124169246A84B4002BF631 /* AnimationUtils.swift in Sources */,
 				43174A1224452B7E009E1F09 /* CardCellVM.swift in Sources */,
+				431241602468A5A7002BF631 /* GradientUtils.swift in Sources */,
 				43174A1E24452B7E009E1F09 /* AppFlow.swift in Sources */,
-				43174A0F24452B7E009E1F09 /* GameInfoCellVM.swift in Sources */,
 				43174A1924452B7E009E1F09 /* MemoryCardsGameVC.swift in Sources */,
-				43174A1724452B7E009E1F09 /* TimeCell.swift in Sources */,
 				43174A2024452B7E009E1F09 /* TimeUtils.swift in Sources */,
+				431241622469E89C002BF631 /* ShadowUtils.swift in Sources */,
 				43174A1C24452B7E009E1F09 /* MenuVC.swift in Sources */,
 				43174A0D24452B7E009E1F09 /* ResultsVC.swift in Sources */,
 				43174A0E24452B7E009E1F09 /* MemoryCardsGameVM.swift in Sources */,
@@ -461,9 +430,8 @@
 				43174A1D24452B7E009E1F09 /* FlowStep.swift in Sources */,
 				43174A1F24452B7E009E1F09 /* NavigationControllerUtils.swift in Sources */,
 				43174A2124452B7E009E1F09 /* ArrayUtils.swift in Sources */,
-				43174A1524452B7E009E1F09 /* TimeCellVM.swift in Sources */,
+				4395CFAF24689DA900D016B0 /* ColorStylesheet.swift in Sources */,
 				43174A0924452B7E009E1F09 /* ResultsVM.swift in Sources */,
-				43174A1124452B7E009E1F09 /* GameInfoCell.swift in Sources */,
 				43174A1A24452B7E009E1F09 /* MenuVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4J5NY3YD66;
 				INFOPLIST_FILE = "memory-cards-game/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4J5NY3YD66;
 				INFOPLIST_FILE = "memory-cards-game/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
