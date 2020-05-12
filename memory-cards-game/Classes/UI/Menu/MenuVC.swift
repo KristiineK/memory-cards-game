@@ -12,6 +12,7 @@ import Reusable
 
 final class MenuVC: UIViewController, StoryboardBased {
     @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var levelView: UIView!
 
     var viewModel: MenuVM!
 
@@ -20,14 +21,26 @@ final class MenuVC: UIViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         addButtons()
+        levelView.addShadow(
+            color: UIColor.blue1B2330.withAlphaComponent(0.12),
+            shadowOpacity: 1,
+            shadowOffset: CGSize(width: 0, height: 24),
+            shadowRadius: 32)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        addBackgroundGradient()
     }
 
     private func addButtons() {
         DifficultyType.allCases.forEach { type in
             let button = UIButton(type: .system)
+            button.layer.cornerRadius = 10
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
             button.setTitle(type.title, for: .normal)
-            button.backgroundColor = .systemGreen
-            button.tintColor = .white
+            button.backgroundColor = type.buttonBackgroundColor
+            button.tintColor = type.buttonTextColor
             button.contentEdgeInsets = UIEdgeInsets(top: 15, left: 10, bottom: 15, right: 10)
             buttonStackView.addArrangedSubview(button)
             button.rx.tap

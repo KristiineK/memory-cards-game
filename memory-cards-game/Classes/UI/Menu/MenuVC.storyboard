@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yBU-64-epj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,36 +11,52 @@
         <!--MenuVC-->
         <scene sceneID="fah-Jd-JNa">
             <objects>
-                <viewController storyboardIdentifier="MenuVC" id="yBU-64-epj" customClass="MenuVC" customModule="MemoryCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuVC" id="yBU-64-epj" customClass="MenuVC" customModule="Memory_cards_game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aFw-T4-gaz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FtC-0S-2rR">
-                                <rect key="frame" x="30" y="437.5" width="354" height="31.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2z-gg-eOP">
+                                <rect key="frame" x="68" y="408" width="278" height="90.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Cards Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEF-k3-j01">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="31.5"/>
-                                        <color key="tintColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FtC-0S-2rR">
+                                        <rect key="frame" x="32" y="33" width="214" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a level to start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEF-k3-j01">
+                                                <rect key="frame" x="0.0" y="0.0" width="214" height="21.5"/>
+                                                <color key="tintColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="FtC-0S-2rR" firstAttribute="leading" secondItem="p2z-gg-eOP" secondAttribute="leading" constant="32" id="2m2-Ha-AaV"/>
+                                    <constraint firstAttribute="trailing" secondItem="FtC-0S-2rR" secondAttribute="trailing" constant="32" id="N05-rV-8rj"/>
+                                    <constraint firstItem="FtC-0S-2rR" firstAttribute="top" secondItem="p2z-gg-eOP" secondAttribute="top" constant="33" id="e98-YP-QY0"/>
+                                    <constraint firstAttribute="bottom" secondItem="FtC-0S-2rR" secondAttribute="bottom" constant="36" id="yGJ-jO-nNb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CO3-UB-cXi" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FtC-0S-2rR" secondAttribute="bottom" id="INH-hw-hYe"/>
-                            <constraint firstItem="FtC-0S-2rR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CO3-UB-cXi" secondAttribute="top" id="U7R-eG-LDe"/>
-                            <constraint firstItem="CO3-UB-cXi" firstAttribute="trailing" secondItem="FtC-0S-2rR" secondAttribute="trailing" constant="30" id="XEw-Ib-dpz"/>
-                            <constraint firstItem="FtC-0S-2rR" firstAttribute="centerY" secondItem="CO3-UB-cXi" secondAttribute="centerY" id="gYM-cI-B5J"/>
-                            <constraint firstItem="FtC-0S-2rR" firstAttribute="leading" secondItem="CO3-UB-cXi" secondAttribute="leading" constant="30" id="iG8-9l-g9D"/>
+                            <constraint firstItem="p2z-gg-eOP" firstAttribute="leading" secondItem="CO3-UB-cXi" secondAttribute="leading" constant="68" id="3M6-Nr-lal"/>
+                            <constraint firstItem="CO3-UB-cXi" firstAttribute="trailing" secondItem="p2z-gg-eOP" secondAttribute="trailing" constant="68" id="3dg-dY-z7X"/>
+                            <constraint firstItem="p2z-gg-eOP" firstAttribute="centerY" secondItem="CO3-UB-cXi" secondAttribute="centerY" id="ELx-xj-laN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CO3-UB-cXi"/>
                     </view>
                     <connections>
                         <outlet property="buttonStackView" destination="FtC-0S-2rR" id="W3y-5r-ig4"/>
+                        <outlet property="levelView" destination="p2z-gg-eOP" id="5L2-j8-dfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJi-De-L9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

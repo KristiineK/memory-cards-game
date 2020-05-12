@@ -17,10 +17,10 @@ final class ResultCell: UITableViewCell {
     @IBOutlet weak var pairsFoundLabel: UILabel!
 
     func configure(round: GameRoundDO, number: Int) {
-        roundNameLabel.text = "\(number). round"
+        roundNameLabel.text = "Round \(number)"
         secondsLabel.text = "\(round.spentTimeInSeconds)s"
         movesLabel.text = "\(round.movesCount) moves"
-        pairsFoundLabel.text = "\(round.pairsFoundCount) pairs found"
+        pairsFoundLabel.text = "\(round.pairsFoundCount) found"
         statusLabel.text = round.isFinished ? "Finished" : "Unfinished"
     }
 }
